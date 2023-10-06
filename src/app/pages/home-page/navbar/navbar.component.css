@@ -1,0 +1,22 @@
+img{
+  mix-blend-mode: multiply;
+}
+.active{
+  color: #be123c;
+}
+ul{
+  font-weight: 400;
+}
+li:hover{
+  color: #be123c;
+  transition-duration: 500ms;
+}
+.open1{
+  transform: translateY(7px) rotate(45deg) ;
+  background: #be123c;
+}
+.open2{
+  transform: translateY(-8px) rotate(-45deg) ;
+  background: #be123c;
+  width: 100%;
+}

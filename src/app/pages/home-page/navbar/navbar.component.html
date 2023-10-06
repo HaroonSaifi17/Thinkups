@@ -1,0 +1,43 @@
+<div class="bg-slate-50 main">
+  <nav
+    id="home"
+    class="max-w-screen-xl flex p-4 justify-between mx-auto items-center"
+  >
+    <div>
+      <a href="#home"
+        ><img class="h-[35px] pt-2" src="/assets/logo2.png" alt=""
+      /></a>
+    </div>
+    <div
+      #list
+      class="max-sm:fixed max-sm:w-2/3 max-sm:top-0 max-sm:-right-full duration-100 max-sm:bg-red-50 max-sm:h-[100vh] z-10"
+    >
+      <ul
+        class="flex text-sm max-sm:flex-col max-sm:w-full max-sm:justify-start max-sm:items-stretch max-sm:h-full  max-sm:py-20 max-sm:pt-[20vh] max-sm:px-4 max-sm:space-y-5"
+      >
+        <li>
+          <a routerLink="/" routerLinkActive="active" class="m-1 p-2">Home</a>
+        </li>
+        <li><a class="m-1 p-2">About</a></li>
+        <li><a class="m-1 p-2">Projects</a></li>
+        <li><a class="m-1 p-2">Contact</a></li>
+        <li><a class="m-1 p-2">Services</a></li>
+      </ul>
+    </div>
+    <div class="max-sm:ml-auto">
+      <button
+        (click)="navigateToRoute()"
+        type="button"
+        class="text-gray-900 my-auto bg-white border border-gray-300 focus:outline-none hover:bg-gray-100 focus:ring-2 focus:ring-gray-200 font-medium rounded-full text-sm px-3 py-1.5 mr-2"
+      >
+        Login
+      </button>
+    </div>
+    <div class="ml-2 block sm:hidden h-[30px] aspect-square my-auto z-10">
+      <a (click)="toggleClass(list)"  class="flex flex-col justify-around items-end h-full w-full">
+        <div [class.open1]="navStatus" class="h-[5px] w-full  bg-gray-700 rounded-full duration-300"></div>
+          <div [class.open2]="navStatus" class="h-[5px] w-2/3 bg-gray-700 rounded-full duration-300"></div>
+      </a>
+    </div>
+  </nav>
+</div>
