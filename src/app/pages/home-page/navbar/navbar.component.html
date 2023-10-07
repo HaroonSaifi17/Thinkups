@@ -3,7 +3,7 @@
     id="home"
     class="max-w-screen-xl flex p-4 justify-between mx-auto items-center"
   >
-    <div>
+    <div class="animate_up">
       <a href="#home"
         ><img class="h-[35px] pt-2" src="/assets/logo2.png" alt=""
       /></a>
@@ -15,20 +15,20 @@
       <ul
         class="flex text-sm max-sm:flex-col max-sm:w-full max-sm:justify-start max-sm:items-stretch max-sm:h-full  max-sm:py-20 max-sm:pt-[20vh] max-sm:px-4 max-sm:space-y-5"
       >
-        <li>
+        <li class="animate_up delay-100">
           <a routerLink="/" routerLinkActive="active" class="m-1 p-2">Home</a>
         </li>
-        <li><a class="m-1 p-2">About</a></li>
-        <li><a class="m-1 p-2">Projects</a></li>
-        <li><a class="m-1 p-2">Contact</a></li>
-        <li><a class="m-1 p-2">Services</a></li>
+        <li [style.animationDelay]="'200ms'"  class="animate_up"><a class="m-1 p-2">About</a></li>
+        <li [style.animationDelay]="'400ms'"  class="animate_up"><a class="m-1 p-2">Projects</a></li>
+        <li [style.animationDelay]="'600ms'"  class="animate_up"><a class="m-1 p-2">Contact</a></li>
+        <li [style.animationDelay]="'800ms'" class="animate_up delay-500"><a class="m-1 p-2">Services</a></li>
       </ul>
     </div>
-    <div class="max-sm:ml-auto">
-      <button
+    <div class="max-sm:ml-auto" >
+      <button [style.animationDelay]="'1000ms'"
         (click)="navigateToRoute()"
         type="button"
-        class="text-gray-900 my-auto bg-white border border-gray-300 focus:outline-none hover:bg-gray-100 focus:ring-2 focus:ring-gray-200 font-medium rounded-full text-sm px-3 py-1.5 mr-2"
+        class="text-gray-900 my-auto bg-white border border-gray-300 focus:outline-none hover:bg-gray-100 focus:ring-2 focus:ring-gray-200 font-medium rounded-full text-sm px-3 py-1.5 mr-2 animate_up"
       >
         Login
       </button>

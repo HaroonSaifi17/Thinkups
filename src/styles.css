@@ -11,3 +11,33 @@
 a{
   cursor: pointer;
 }
+.animate_up {
+  opacity: 0;
+  animation: up 700ms ease-in;
+  animation-fill-mode: forwards;
+}
+@keyframes up {
+  0% {
+    transform: translateY(-100%);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+.animate_down {
+  opacity: 0;
+  animation: down 700ms ease-in;
+  animation-fill-mode: forwards;
+}
+@keyframes down {
+  0% {
+    transform: translateY(100%);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
